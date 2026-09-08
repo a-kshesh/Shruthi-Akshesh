@@ -445,6 +445,7 @@
 
     <script>
       const FORMSPREE_ENDPOINT = "https://formspree.io/f/xyeynvke";
+      const FORMBRIDGE_ENDPOINT = "https://app.formbridge.ai/api/forms/6a9f7bfa73a9f12a20d2266d"
 
       const choices = document.querySelectorAll('.choice');
       choices.forEach(choice => {
@@ -517,7 +518,7 @@
         const formData = new FormData(form);
 
         try {
-          const response = await fetch(FORMSPREE_ENDPOINT, {
+          const response = await fetch(FORMBRIDGE_ENDPOINT, {
             method: 'POST',
             body: formData,
             headers: { 'Accept': 'application/json' }
